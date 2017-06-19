@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    font-size: 12px;
+    font-family: Verdana, sans-serif;
+}
+
+#main-container {
+    width: 700px;
+    height: 500px;
+    background-color: red;
+    border-radius: 7px;
+    border: 3px solid black;
+    margin: 0 auto;
+}
+
+.container {
+	width: 100% !important;
+}
+
+.champion-spell {
+	display: flex;
+}
+
+.champion-spell-image {
+	width: 64px;
+	height: 64px;
+}
+
+.champion-spell-details {
+	padding-left: 10px;
+	margin-top: -10px;
+}
+
+.champion-image {
+	height: 560px;
+}
+
+.lol-logo {
+    width: 200px;
+	margin-top: -30px;
+}
+
+.dexheader {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.pokemon-view {
+    width: 70%;
+    margin: 0 auto;
+    border: 8px solid grey;
+    border-radius: 7px;
+    height: 300px;
+    background-color: white;
+}
+
+#paginationview {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    bottom: 0;
+}
+
+.previous-el {
+    position: absolute;
+    left: 30px;
+}
+
+.next-el {
+    position: absolute;
+    right: 30px;
+}
+.load-view {
+    height: 20%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.champion-container {
+	display: flex;
+}
+
+.champion-menu {
+	padding-left: 50px !important;
+	width: 80vw;
+}
+
+.champion-details
+{
+	padding-left: 60px;
+	max-width: 80%;
+}
