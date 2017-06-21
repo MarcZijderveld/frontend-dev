@@ -1,1 +1,6 @@
 # frontend-dev
+
+Voor de opdracht van Serious Javascript wil ik de API van de game League of Legends gaan gebruiken gemaakt door RIOT Games. In deze API staat data van alle heroes (champions) die speelbaar zijn in de game League of Legends. Dit wil ik dan vervolgens nog koppelen aan de API van champions.gg wat alle informatie bevat over de speeldata van alle champions, denk hierbij aan winrates, runes / masteries en andere data. 
+Ik wil hiervoor gebruik gaan maken van ES2015 in combinatie met Babel. Over de keuze tussen backbone en react ben ik nog niet helemaal zeker maar waarschijnlijk ga ik voor backbone. De applicatie zal bestaan uit verschillende VIEWs, de hoofdpagina is een view, verder als je op een champion klikt opent er een nieuwe pagina wat weer een nieuw VIEW is. 
+De API van LoL bestaat uit ongeveer 130 champions dus dit is een flinke hoeveelheid data om te verwerken, daardoor heb ik gekozen om voor nu alleen maar data te tonen en voor nu niks op te gaan slaan in een eigen database. Natuurlijk zijn er wel mogelijkheden in de toekomst om dit soort functionaliteiten alsnog toe te voegen. 
+ 
