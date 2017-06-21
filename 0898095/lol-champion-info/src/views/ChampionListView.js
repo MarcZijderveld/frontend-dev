@@ -5,7 +5,7 @@ import ChampionDetails from '../views/ChampionDetails';
 import Champions from '../collections/Champions';
 
 /**
- * Object representing the TeamLinks element
+ * Object representing the ChampionListView element
  *
  * @constructor
  */
@@ -19,7 +19,7 @@ const ChampionListView = View.extend({
         this.templateChampions = _.template(this.$('#template-champions').html());
         this.templateError = _.template(this.$('#template-error').html());
 
-        //Listen to global events for change of new club
+        //Listen to global events for change of new champions
         App.events.on('loadChampions', this.loadChampions, this);
         App.events.on('removeChampions', this.removeChampions, this);
     },
@@ -47,7 +47,7 @@ const ChampionListView = View.extend({
     },
 
     /**
-     * Success Handler will add HTML of matches to this $el
+     * Success Handler will add HTML of champions to this $el
      *
      * @param collection
      */

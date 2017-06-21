@@ -2,7 +2,7 @@ import {Collection} from 'backbone';
 import Rune from '../models/Rune';
 
 /**
- * Collection for the LoL Champion endpoint
+ * Collection for the LoL Runes endpoint
  *
  * @constructor
  */

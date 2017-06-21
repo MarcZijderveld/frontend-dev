@@ -22,14 +22,19 @@ import HeaderLinks from './views/HeaderLinks';
     let init = function ()
     {
         setGlobalVariables();
+        //Initialize the champion list view
         let ChampionCollection = new Champions();
         new ChampionListView({el: "#champions", collection: ChampionCollection});
+        //Initialize the runes list view
         let RunesCollection = new Runes();
         new RuneListView({el: "#runes", collection: RunesCollection});
+        //Initlialize the detail view for the champions.
         let championCollection = new Champions;
         new ChampionDetails({el: "#champion", collection: championCollection});
+        //Initialize the routing for the links at the top nav bar.
         new HeaderLinks({el: "#header-links"});
         Backbone.history.start({pushState: true, root: "/0898095/lol-champion-info/"});
+        //Trigger the initial load of champions on page load.
         App.events.trigger('loadChampions', { });       
     };
     window.addEventListener('load', init);

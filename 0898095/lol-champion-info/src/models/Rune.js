@@ -1,7 +1,7 @@
 import {Model} from 'backbone';
 
 /**
- * Model for every Map in the collection
+ * Model for every Rune in the collection
  *
  * @constructor
  */

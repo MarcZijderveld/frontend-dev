@@ -1,6 +1,3 @@
-/**
- * Created by Arman Jalalian on 6/8/2017.
- */
 import {Router} from 'backbone';
 
 /**

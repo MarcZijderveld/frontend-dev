@@ -5,7 +5,7 @@ import ChampionDetails from '../views/ChampionDetails';
 import Champions from '../collections/Champions';
 
 /**
- * Object representing the TeamLinks element
+ * Object representing the Rune List View element
  *
  * @constructor
  */
@@ -39,17 +39,19 @@ const ChampionListView = View.extend({
             }
         });
 
+        //Trigger remove events.
         App.events.trigger('removeChampions', {});  
         App.events.trigger('removeChampion', {});
     },
 
+    //Remove champion handler.
     removeRunes: function()
     {
         this.$el.html('');
     },
 
     /**
-     * Success Handler will add HTML of matches to this $el
+     * Success Handler will add HTML of Runes to this $el
      *
      * @param collection
      */

@@ -2,7 +2,7 @@ import {View} from 'backbone';
 import LeagueOfLegendsRouter from '../routers/LeagueOfLegendsRouter';
 
 /**
- * Object representing the TeamLinks element
+ * Object representing the Champion Detail Links element
  *
  * @constructor
  */
