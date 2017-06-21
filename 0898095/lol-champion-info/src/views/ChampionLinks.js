@@ -34,8 +34,6 @@ const ChampionLinks = View.extend({
 
         //Use trigger & replace to update URL and make the router listen to change
         this.router.navigate(url, {trigger: true, replace: true});
-
-        console.log("Trigger");
     }
 });
 

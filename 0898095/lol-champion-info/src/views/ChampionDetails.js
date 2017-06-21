@@ -1,11 +1,8 @@
-/**
- * Created by Arman Jalalian on 6/12/2017.
- */
 import {View} from 'backbone';
 import _ from 'underscore';
 
 /**
- * Object representing the PokemonDetails element
+ * Object representing the ChampionDetails element
  *
  * @constructor
  */
@@ -20,7 +17,6 @@ const ChampionDetails = View.extend({
 
         App.events.on('newChampion', this.loadChampion, this);
         App.events.on('removeChampion', this.remove, this);
-        console.log("init");
     },
 
     /**
@@ -31,13 +27,11 @@ const ChampionDetails = View.extend({
     },
 
     /**
-     * Wrapper function to load the pokemon through the collection
+     * Wrapper function to load the champion through the collection
      *
      * @param data
      */
     loadChampion: function (data) {
-        console.log("Load champions");
-
         this.collection.id = data.id;
         this.collection.fetch({
             success: (collection) => this.loadChampionSuccessHandler(collection),
@@ -46,12 +40,11 @@ const ChampionDetails = View.extend({
     },
 
     /**
-     * Success Handler will add HTML of pokemon to this $el
+     * Success Handler will add HTML of champion to this $el
      *
      * @param collection
      */
     loadChampionSuccessHandler: function (collection) {
-        console.log(collection);
         this.$el.html(this.templateChampions({champions: collection.models}));
         App.events.trigger('removeChampions', {});  
     },
@@ -63,7 +56,8 @@ const ChampionDetails = View.extend({
      * @param response
      */
     loadChampionErrorHandler: function (collection, response) {
-        this.$el.html(this.templatePokemonError({message: response.responseJSON.error}));
+        this.templateError = _.template(this.$('#template-champion-error').html());
+        this.$el.html(this.templateChampions({message: response.responseJSON.error}));
     }
 });
 

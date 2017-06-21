@@ -15,6 +15,10 @@
     <div class="container">
         <div class="navbar-header">
             <a href="/0898095/lol-champion-info/" class="navbar-brand"> <img class="lol-logo" src="/0898095/lol-champion-info/src/images/League_of_legends_logo_transparent.png"></a>
+            <div id="header-links">
+                <a id="champion-overview-link" href="#" data-type="champions">Champions</a>
+                <a id="runes-overview-link" href="#" data-type="runes">Runes</a>
+            </div>
         </div>
     </div>
 </nav>
@@ -61,6 +65,28 @@
                         <div class="champion-links">
                             <a href="#" data-id="<%= champion.get('id') %>">Read More</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+            </div>
+        </script>
+    </div>
+    <div id="runes">
+        <script id="template-error" type="text/template">
+            <span class="error"><%= message %></span>
+        </script>
+        <script id="template-runes" type="text/template">
+            <div class="panel panel-default">
+            <% _.each(runes, function(rune, index, list){ %>
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading rune-title">
+                        <%= rune.get('name') %> (Tier <%= rune.get('rune')['tier'] %>)
+                    </div>
+                    <div class="panel-body rune-details">
+                            <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/rune/<%= rune.get('image')['full'] %>" class="champ-image">
+                            <span class="rune-desc"><%= rune.get('description') %></span>
                     </div>
                 </div>
             </div>
@@ -171,6 +197,6 @@
 </div>
 <script src="/0898095/lol-champion-info/dist/bundle.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

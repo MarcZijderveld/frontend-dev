@@ -31,7 +31,6 @@ const ChampionListView = View.extend({
      */
     loadChampions: function (data)
     {
-        console.log("start loading");
         this.collection.fetch({
             success: (collection) => this.loadChampionsSuccessHandler(collection),
             error: (collection, response) => this.loadChampionsErrorHandler(collection, response),
@@ -41,6 +40,7 @@ const ChampionListView = View.extend({
         });
     },
 
+    //Remove all champions
     removeChampions: function()
     {
         this.$el.html('');
@@ -55,6 +55,7 @@ const ChampionListView = View.extend({
     {
         this.$el.html(this.templateChampions({champions: collection.models}));
         new ChampionLinks({el: '.champion-links'});
+        App.events.trigger('removeRunes', {});  
     },
 
     /**

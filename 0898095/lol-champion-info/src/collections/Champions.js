@@ -2,7 +2,7 @@ import {Collection} from 'backbone';
 import Champion from '../models/Champion';
 
 /**
- * Collection for the Pokemon endpoint
+ * Collection for the LoL Champion endpoint
  *
  * @constructor
  */

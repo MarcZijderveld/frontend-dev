@@ -4,13 +4,15 @@
 import {Router} from 'backbone';
 
 /**
- * Router for the pokemons URL's
+ * Router for the Champion URL's
  *
  * @constructor
  */
 const LeagueOfLegendsRouter = Router.extend({
     routes: {
-        'champion/:id': 'championAction'
+        'champion/:id': 'championAction',
+        'champions' : 'championsAction',
+        'runes' : 'runesAction'
     },
 
     /**
@@ -22,6 +24,12 @@ const LeagueOfLegendsRouter = Router.extend({
         App.events.trigger('newChampion', {
             id: id
         });
+    },
+    championsAction: function (id) {
+        App.events.trigger('loadChampions', { });
+    },
+    runesAction: function (id) {
+        App.events.trigger('loadRunes', { });
     }
 });
 
