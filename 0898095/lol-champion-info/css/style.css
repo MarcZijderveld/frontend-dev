@@ -92,7 +92,7 @@ body, html {
     height: 110px;
 }
 
-.rune-title {
+.rune-title, .lol-champion-name {
     height: 60px;
 }
 
